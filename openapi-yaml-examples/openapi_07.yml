@@ -1,9 +1,9 @@
 openapi: 3.0.3
 info:
-  title: EazyShop Products APIs Definition
+  title: Shop Products APIs Definition
   description: |
       # About Us
-      **EazyShop** is a open market product selling company. Any website can list our products by  using our _APIs_. Shipping & other logistics will be taken care by us. You will get an `Affiliate commision` for selling our products.
+      **Shop** is a open market product selling company. Any website can list our products by  using our _APIs_. Shipping & other logistics will be taken care by us. You will get an `Affiliate commision` for selling our products.
       # Categories suported
         - Mobiles
           - Apple
@@ -12,17 +12,17 @@ info:
         - Laptops
         - Televisions
         - Headphones
-  termsOfService: https://eazyshop.com/terms/
+  termsOfService: https://shop.com/terms/
   contact:
     name: API Support
-    url: https://www.eazyshop.com/support
-    email: support@eazyshop.com
+    url: https://www.shop.com/support
+    email: support@shop.com
   license:
-    name: EazyShop License
-    url: https://www.eazyshop.com/licenses/LICENSE-2.0.html
+    name: Shop License
+    url: https://www.shop.com/licenses/LICENSE-2.0.html
   version: 0.0.1
 servers:
-  - url: https://development.eazyshop-server.com/v1
+  - url: https://development.shop-server.com/v1
     description: Development server
 tags:
   - name: Categories
@@ -37,7 +37,7 @@ paths:
       tags:
         - Categories
       summary: List all catgories
-      description: Returns the list of categories supported by EazyShop
+      description: Returns the list of categories supported by Shop
       parameters:
         - name: categoryId
           in: query
@@ -88,7 +88,7 @@ paths:
       tags:
         - Categories
       summary: Return category details
-      description: Returns the category details from EazyShop
+      description: Returns the category details from Shop
       parameters:
         - name: categoryId
           in: path
@@ -113,7 +113,7 @@ paths:
         - Products
       summary: List all products
       description: |
-        Returns the list of products supported by EazyShop
+        Returns the list of products supported by Shop
       parameters:
         - name: categoryId
           in: query
@@ -158,7 +158,7 @@ paths:
         - Products
       summary: Return product details
       description: |
-        Returns the product details from  EazyShop
+        Returns the product details from  Shop
       parameters:
         - name: productId
           in: path
@@ -183,7 +183,7 @@ paths:
         - Orders
       summary: Create Order
       description: |
-        Post order details to EazyShop for processing
+        Post order details to Shop for processing
         and shipping
       requestBody:
         content:
@@ -214,7 +214,7 @@ paths:
         - Orders
       summary: Update Order
       description: |
-        Update order details to EazyShop for processing
+        Update order details to Shop for processing
         and shipping
       requestBody:
         content:
@@ -239,7 +239,7 @@ paths:
       tags:
         - Orders
       summary: Delete Order
-      description: Delete order details from EazyShop
+      description: Delete order details from Shop
       parameters:
         - $ref: "#/components/parameters/orderIdQueryParam"
       responses:
@@ -251,7 +251,7 @@ paths:
       tags:
         - Orders
       summary: Get Order Details
-      description: Get order details from EazyShop
+      description: Get order details from Shop
       parameters:
         - $ref: "#/components/parameters/orderIdQueryParam"
       responses:
@@ -321,7 +321,7 @@ components:
         quantity:
           type: integer
           description: |
-            ***Quantity*** represents `stock` value when this field is being sent by EazyShop.Where as in the scenarios of consumer sending this feild, it represents `number of product items` inside the order. Consumers are expected to handle the scenario of stopping the end user <u>*when the stock value is 0*</u>
+            ***Quantity*** represents `stock` value when this field is being sent by Shop.Where as in the scenarios of consumer sending this feild, it represents `number of product items` inside the order. Consumers are expected to handle the scenario of stopping the end user <u>*when the stock value is 0*</u>
     Category:
       type: object
       properties:
@@ -333,4 +333,4 @@ components:
     InternalServerError:
       description: |
         An error occured while processing the request.
-        Please contact support@eazyshop.com
+        Please contact support@shop.com
