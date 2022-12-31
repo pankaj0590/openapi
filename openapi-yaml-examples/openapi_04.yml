@@ -1,25 +1,25 @@
 openapi: 3.0.3
 info:
-  title: EazyShop Products APIs Definition
+  title: Shop Products APIs Definition
   description: |
-     Using this OpenAPI specification, any consumer can understand the APIs that are exposed by EazyShop
-  termsOfService: https://eazyshop.com/terms/
+     Using this OpenAPI specification, any consumer can understand the APIs that are exposed by Shop
+  termsOfService: https://shop.com/terms/
   contact:
     name: API Support
-    url: https://www.eazyshop.com/support
-    email: support@eazyshop.com
+    url: https://www.shop.com/support
+    email: support@shop.com
   license:
-    name: EazyShop License
-    url: https://www.eazyshop.com/licenses/LICENSE-2.0.html
+    name: Shop License
+    url: https://www.shop.com/licenses/LICENSE-2.0.html
   version: 0.0.1
 servers:
-  - url: https://development.eazyshop-server.com/v1
+  - url: https://development.shop-server.com/v1
     description: Development server
 paths:
   /categories:
     get:
       summary: List all catgories
-      description: Returns the list of categories supported by EazyShop
+      description: Returns the list of categories supported by Shop
       parameters:
         - name: categoryId
           in: query
@@ -45,7 +45,7 @@ paths:
   /categories/{categoryId}:
     get:
       summary: Return category details
-      description: Returns the category details from EazyShop
+      description: Returns the category details from Shop
       parameters:
         - name: categoryId
           in: path
@@ -71,7 +71,7 @@ paths:
     get:
       summary: List all products
       description: |
-        Returns the list of products supported by EazyShop
+        Returns the list of products supported by Shop
       parameters:
         - name: categoryId
           in: query
@@ -104,7 +104,7 @@ paths:
     get:
       summary: Return product details
       description: |
-        Returns the product details from  EazyShop
+        Returns the product details from  Shop
       parameters:
         - name: productId
           in: path
@@ -136,7 +136,7 @@ paths:
     post:
       summary: Create Order
       description: |
-        Post order details to EazyShop for processing
+        Post order details to Shop for processing
         and shipping
       requestBody:
         content:
@@ -183,7 +183,7 @@ paths:
     put:
       summary: Update Order
       description: |
-        Update order details to EazyShop for processing
+        Update order details to Shop for processing
         and shipping
       requestBody:
         content:
@@ -224,7 +224,7 @@ paths:
           description: Order details updated successfully
     delete:
       summary: Delete Order
-      description: Delete order details from EazyShop
+      description: Delete order details from Shop
       parameters:
         - name: orderId
           in: query
@@ -236,7 +236,7 @@ paths:
           description: Order details cancelled successfully
     get:
       summary: Get Order Details
-      description: Get order details from EazyShop
+      description: Get order details from Shop
       parameters:
         - name: orderId
           in: query
