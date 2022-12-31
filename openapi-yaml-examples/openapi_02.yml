@@ -1,23 +1,23 @@
 openapi: 3.0.3
 info:
-  title: EazyShop Products APIs Definition
+  title: Shop Products APIs Definition
   description: |
-     Using this OpenAPI specification, any consumer can understand the APIs that are exposed by EazyShop
-  termsOfService: https://eazyshop.com/terms/
+     Using this OpenAPI specification, any consumer can understand the APIs that are exposed by Shop
+  termsOfService: https://shop.com/terms/
   contact:
     name: API Support
-    url: https://www.eazyshop.com/support
-    email: support@eazyshop.com
+    url: https://www.shop.com/support
+    email: support@shop.com
   license:
-    name: EazyShop License
-    url: https://www.eazyshop.com/licenses/LICENSE-2.0.html
+    name: Shop License
+    url: https://www.shop.com/licenses/LICENSE-2.0.html
   version: 0.0.1
 servers:
-  - url: https://development.eazyshop-server.com/v1
+  - url: https://development.shop-server.com/v1
     description: Development server
-  - url: https://staging.eazyshop-server.com/v1
+  - url: https://staging.shop-server.com/v1
     description: Staging server
-  - url: https://api.eazyshop-server.com/v1
+  - url: https://api.shop-server.com/v1
     description: Production server
   - url: https://{username}.server.com:{port}/{version}
     variables:
